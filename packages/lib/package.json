@@ -1,0 +1,31 @@
+{
+    "name": "@sgif/lib",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts",
+        "./services": "./src/services/index.ts",
+        "./api": "./src/api.ts",
+        "./auth": "./src/auth.ts",
+        "./rbac": "./src/rbac.ts"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf .turbo node_modules"
+    },
+    "devDependencies": {
+        "@sgif/config": "workspace:*",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "zustand": "^4.4.7"
+    },
+    "peerDependencies": {
+        "@sgif/types": "workspace:*"
+    }
+}

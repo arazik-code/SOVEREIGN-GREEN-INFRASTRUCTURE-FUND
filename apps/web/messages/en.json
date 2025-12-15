@@ -1,0 +1,10 @@
+{
+    "Index": {
+        "title": "SGIF Frontend",
+        "loading": "System Initialization..."
+    },
+    "Auth": {
+        "login": "Login",
+        "signup": "Sign Up"
+    }
+}

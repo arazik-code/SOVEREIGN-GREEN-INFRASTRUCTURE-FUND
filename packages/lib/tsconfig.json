@@ -1,0 +1,6 @@
+{
+    "extends": "@sgif/config/tsconfig.json",
+    "include": [
+        "src/**/*"
+    ]
+}
