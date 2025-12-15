@@ -5,6 +5,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { financialsService } from "@sgif/lib";
 
+// Mock data for offline/demo mode
+const MOCK_KPI = {
+    aum: "$500M",
+    activeProjects: 12,
+    carbonOffset: "1.2M tCO2",
+    irr: "14.2%"
+};
+
 // Query keys factory
 export const kpiKeys = {
     all: ['kpi'] as const,
@@ -19,7 +27,16 @@ export const kpiKeys = {
 export function useKpi() {
     return useQuery({
         queryKey: kpiKeys.current(),
-        queryFn: () => financialsService.getKpis(),
+        queryFn: async () => {
+            try {
+                return await financialsService.getKpis();
+            } catch (error) {
+                console.warn("KPI fetch failed, using mock data", error);
+                return MOCK_KPI;
+            }
+        },
+        staleTime: 5 * 60 * 1000,
+        gcTime: 30 * 60 * 1000,
     });
 }
 

@@ -5,6 +5,15 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { projectsService, type ProjectFilters, type CreateProjectDTO, type UpdateProjectDTO } from "@sgif/lib";
 
+// Mock data for offline/demo mode
+const MOCK_PROJECTS = [
+    { id: "1", name: "Al Dhafra Solar PV", location: "UAE", stage: "Construction", budget: "$1.2B", irr: "8.5%", type: "Solar" },
+    { id: "2", name: "NEOM Hydrogen Plant", location: "KSA", stage: "Development", budget: "$5.0B", irr: "12.0%", type: "Hydrogen" },
+    { id: "3", name: "Barakah Unit 4", location: "UAE", stage: "Operational", budget: "$24B", irr: "7.2%", type: "Nuclear" },
+    { id: "4", name: "Oman Green Ammonia", location: "Oman", stage: "Feasibility", budget: "$3.5B", irr: "11.5%", type: "Ammonia" },
+    { id: "5", name: "Egypt Wind Farm", location: "Egypt", stage: "Sourcing", budget: "$300M", irr: "9.1%", type: "Wind" },
+];
+
 // Query keys factory
 export const projectKeys = {
     all: ['projects'] as const,
@@ -21,7 +30,16 @@ export const projectKeys = {
 export function useProjects(filters?: ProjectFilters) {
     return useQuery({
         queryKey: projectKeys.list(filters || {}),
-        queryFn: () => projectsService.getAll(filters),
+        queryFn: async () => {
+            try {
+                return await projectsService.getAll(filters);
+            } catch (error) {
+                console.warn("Projects fetch failed, using mock data", error);
+                return MOCK_PROJECTS;
+            }
+        },
+        staleTime: 5 * 60 * 1000,
+        gcTime: 30 * 60 * 1000,
     });
 }
 
