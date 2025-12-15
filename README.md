@@ -133,7 +133,7 @@ Energy infrastructure will **decouple from legacy power systems**. Carbon market
 **Interested in reshaping global infrastructure?**
 
 - 📧 **Investment Relations**: [aymanerazik.tech](#)
-- 🌐 **Investor Portal**: [https://sovereign-green-infrastructure-fund-mu.vercel.app]([https://sovereign-green-infrastructure-fund-mu.vercel.app](https://sovereign-green-infrastructure-fund.vercel.app/en))
+- 🌐 **Investor Portal**: [https://sovereign-green-infrastructure-fund.vercel.app/en]
 - 📋 **Information Memorandum**: Available upon NDA execution
 
 ---
