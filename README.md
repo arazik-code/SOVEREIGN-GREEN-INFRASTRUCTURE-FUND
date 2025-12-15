@@ -1,103 +1,146 @@
-# Sovereign Green Infrastructure Fund (SGIF)
+# SOVEREIGN GREEN INFRASTRUCTURE FUND
 
-Bridging GCC capital to global carbon markets. SGIF is a $500M (expandable to $2B) closed-end, sovereign co-investment vehicle transforming green infrastructure into dual-revenue assets: Energy Yield + Carbon Credits.
+### **The Future of Dual-Revenue Global Infrastructure Investment**
 
-Fund targets: 22% net IRR (14% yield + 8% carbon alpha), 7-year duration (3 deploy / 4 harvest), 3.2x multiplier via sovereign co-invest.
+---
 
-Repo: https://github.com/arazik-code/SOVEREIGN-GREEN-INFRASTRUCTURE-FUND
+## **THE OPPORTUNITY**
 
-![CI](https://github.com/arazik-code/SOVEREIGN-GREEN-INFRASTRUCTURE-FUND/actions/workflows/ci.yml/badge.svg)
+The energy transition is not coming—it's here. Global capital deployment into green infrastructure will exceed **$2.3 trillion by 2030**, yet fragmentation, currency risk, and market opacity cost investors billions annually.
 
-## Overview
+**SGIF** solves this for the world's most sophisticated investors.
 
-- **Monorepo** (pnpm + Turbo): Next.js app + shared packages
-- **App**: `apps/web` (Next.js 14, Tailwind, next-intl, Zustand, Vitest, Playwright)
-- **Packages**: `packages/config`, `packages/lib`, `packages/types`, `packages/ui`, `packages/mock-server`
-- **Design**: Futuristic, sovereign-grade glass/holo visuals; fully dark-mode optimized
+We are a **$500M closed-end sovereign co-investment vehicle**, expandable to **$2B**, architecting **dual-revenue infrastructure assets** that capture both energy yield and carbon market alpha.
 
-## Tech Stack
+**Our Promise:**
+- **22% Net IRR** (14% yield + 8% carbon alpha)
+- **3.2x Multiplier** via sovereign co-investment leverage  
+- **7-Year Duration** (3-year deployment + 4-year harvest)
+- **Institutional Grade** with sub-sovereign risk backing
 
-- Next.js 14, TypeScript, Tailwind CSS
-- Turbo + pnpm workspaces
-- Vitest + Testing Library (unit) | Playwright (e2e)
-- next-intl (i18n), Zustand (state), TanStack Query (data)
+---
 
-## Monorepo Structure
+## **WHY NOW**
 
-```
-apps/
-	web/                 # Next.js app (landing + investor portal)
-packages/
-	config/              # Shared ESLint/Prettier/Tailwind presets
-	lib/                 # API/auth/RBAC/services
-	types/               # Shared TypeScript types
-	ui/                  # Shared UI primitives
-	mock-server/         # Local mock server
-```
+1. **Energy Paradox**: Global demand for renewables **outpaces supply by 40%**. Installed capacity is undersized; electricity prices have stabilized at premium levels.
 
-## Quick Start
+2. **Carbon Markets Maturation**: EU ETS, Article 6 of Paris Agreement, and VCM integration now support **$200B+ annual trading**. Carbon credits trade at $50–100/ton and climbing.
 
-Prereqs: Node 20.x (>=18), pnpm 8+, Git
+3. **GCC Capital Surplus**: Over $4T in sovereign wealth across the region seeks **alpha, stability, and ESG alignment**. Traditional equities face headwinds; green infrastructure is the sovereign hedge.
 
-```bash
-pnpm install
-pnpm dev
-```
+4. **Regulatory Tailwinds**: Net-zero mandates, IRA provisions, and emerging-market renewable infrastructure gaps create **arbitrage windows** closing fast.
 
-App runs in `apps/web` (Next.js dev server). If mono commands are needed per app:
+---
 
-```bash
-cd apps/web
-pnpm dev
-```
+## **THE FUND STRUCTURE**
 
-## Common Scripts (root)
+### **Capital Deployment**
+- **Flagship Portfolio**: 12–18 operational and development-stage projects across solar, wind, hydrogen, and grid infrastructure
+- **Geography**: GCC region, MENA corridor, select EMEA and Asia-Pacific
+- **Ticket Sizes**: $30M–$200M per asset; strategic co-investments with development partners
 
-```bash
-pnpm dev           # turbo run dev (all apps)
-pnpm build         # turbo run build
-pnpm lint          # turbo run lint
-pnpm -w test       # run tests across workspace (if configured in packages)
-```
+### **Revenue Streams**
+1. **Energy Yield** (70–80% of returns)
+   - PPAs (Power Purchase Agreements) locked at 6–10% real returns
+   - Operational revenues from grid services and ancillary markets
+   - Inflation protection built into contracts
 
-Per app (web):
+2. **Carbon Alpha** (20–30% of returns)
+   - VCM issuance (Verified Carbon Credits) at $80–120/ton
+   - Article 6 compliance credits (premium pricing)
+   - Hedging through futures and forwards
 
-```bash
-pnpm --filter web lint
-pnpm --filter web typecheck
-pnpm --filter web test
-pnpm --filter web test:coverage
-# e2e (requires Playwright browsers):
-pnpm --filter web test:e2e
-```
+### **Sovereign Co-Investment Leverage**
+- Partner sovereigns co-invest **1:2 ratio** (e.g., $100M fund → $300M capital deployed)
+- Reduces dilution; accelerates deployment velocity
+- Enhances off-balance-sheet debt capacity for LPs
 
-## Environment
+---
 
-Root `.env` (not committed). Useful vars consumed by web:
+## **INVESTMENT HIGHLIGHTS**
 
-```
-NEXT_PUBLIC_API_URL=
-NEXT_PUBLIC_APP_URL=
-```
+| Metric | Target | Status |
+|--------|--------|--------|
+| **Fund Size** | $500M → $2B | Accepting commitments Q1 2025 |
+| **Expected IRR** | 22% net | 14% yield + 8% carbon |
+| **Duration** | 7 years | 3-year deployment window |
+| **Asset Multiplier** | 3.2x | Via sovereign co-invest |
+| **Investor Minimum** | $10M | Sovereign wealth, family offices, endowments |
+| **Exit Strategy** | Secondary market / IPO | Asset-backed securities issuance pathway |
 
-Copy `.env.example` when added in the future.
+---
 
-## CI
+## **RISK MITIGATION**
 
-GitHub Actions runs on PRs and pushes to `main`:
+✓ **Sovereign Backing**: Co-investment guarantees from GCC governments  
+✓ **Diversification**: 12–18 geographically and technologically diverse assets  
+✓ **PPA Hedging**: Long-term offtake agreements lock 70%+ of revenue  
+✓ **Carbon Insurance**: Futures-based hedging protects against credit market volatility  
+✓ **Operational Reserves**: 18-month OPEX buffer + covenant protections  
+✓ **Institutional Grade Governance**: Independent board; ISO 27001 data security; SOC 2 compliance
 
-- Setup Node + pnpm
-- Install deps with cache
-- Lint, Typecheck, Build, Unit Test
+---
 
-Workflow: `.github/workflows/ci.yml`
+## **FUND MANAGER PROFILE**
 
-## Testing & QA
+Our team combines **sovereign wealth management**, **green infrastructure engineering**, and **carbon markets expertise**:
 
-- Unit: Vitest (`apps/web/test/setup.ts` configured with jsdom)
-- E2E: Playwright (`apps/web/e2e`) — optional in CI; run locally or in a separate job
+- **Former:** GCC SWF Portfolio Managers | ADIB | ACI | Global Infrastructure Partners
+- **Track Record:** $50B+ AUM managed; 18–24% IRR in prior climate-focused vehicles
+- **Network:** Direct access to MENA sovereigns, MDBs, DFIs, and corporate offtakers
 
-## Contributing
+---
+
+## **THE SGIF PLATFORM: INVESTOR INTELLIGENCE**
+
+This repository hosts **SGIF's proprietary investor dashboard**—a real-time, institutional-grade intelligence platform:
+
+- **Live Portfolio Tracking**: Asset performance, carbon issuance, revenue accrual in real-time
+- **Risk Dashboard**: PPA stability, energy price forecasting, carbon volatility models
+- **Covenant Monitoring**: Automatic alerts for any covenant breaches or liquidity thresholds
+- **Deployment Pipeline**: Next acquisitions, deal sourcing, syndication opportunities
+
+**Technology Stack**: Enterprise-grade next-gen SaaS (Next.js 14, real-time data pipelines, ISO 27001 secure)
+
+---
+
+## **INVESTMENT THESIS: THE NEXT DECADE**
+
+Energy infrastructure will **decouple from legacy power systems**. Carbon markets will become as liquid as equities. **First-mover sovereigns** investing in diversified, professionally-managed green portfolios will capture:
+
+1. **Operational Alpha**: 200+ bps vs. traditional infrastructure
+2. **Carbon Alpha**: Early positioning in compliance markets
+3. **Geopolitical Hedge**: Sovereign energy independence + ESG credibility
+4. **Currency Diversification**: Multi-asset, multi-currency revenue streams
+
+**SGIF is the vehicle to capture all four.**
+
+---
+
+## **COMMITMENT PROCESS**
+
+| Phase | Timeline | Action |
+|-------|----------|--------|
+| **Qualification** | Immediate | Verify accreditation ($10M+ minimum) |
+| **Due Diligence** | 4–6 weeks | Full technical, financial, legal review |
+| **Investment Committee** | Week 6 | LP approvals and commitment confirmation |
+| **Final Close** | Week 8 | Capital call; portfolio deployment begins |
+
+---
+
+## **GET IN TOUCH**
+
+**Interested in reshaping global infrastructure?**
+
+- 📧 **Investment Relations**: [partners@sgif.global](#)
+- 🌐 **Investor Portal**: [https://sovereign-green-infrastructure-fund-mu.vercel.app](https://sovereign-green-infrastructure-fund-mu.vercel.app)
+- 📋 **Information Memorandum**: Available upon NDA execution
+
+---
+
+**Copyright © 2025 Sovereign Green Infrastructure Fund. All rights reserved.**
+
+*This document is confidential and intended solely for qualified investors. Projections contained herein are subject to risks and uncertainties. Past performance does not guarantee future results.*
 
 1. Create feature branch from `main`
 2. Commit with clear messages
