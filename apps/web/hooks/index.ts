@@ -6,5 +6,4 @@
 // Query hooks (React Query)
 export * from './queries';
 
-// Re-export individual hooks
-export { useData } from './use-data';
+// Note: keep individual exports in their source files to avoid conflicts
