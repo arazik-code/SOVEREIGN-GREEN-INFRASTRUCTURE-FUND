@@ -2,7 +2,7 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, type AbstractIntlMessages } from "next-intl";
 import { useState, type ReactNode } from "react";
 
 /**
@@ -70,7 +70,7 @@ function getQueryClient(): QueryClient {
 interface ProvidersProps {
     children: ReactNode;
     locale: string;
-    messages: Record<string, unknown>;
+    messages: AbstractIntlMessages;
 }
 
 export default function Providers({ children, locale, messages }: ProvidersProps) {

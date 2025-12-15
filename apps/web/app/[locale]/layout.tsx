@@ -30,7 +30,7 @@ export default async function RootLayout({
                 inter.variable,
                 playfair.variable
             )}>
-                <Providers locale={locale} messages={messages as Record<string, unknown>}>
+                <Providers locale={locale} messages={messages}>
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="dark"
